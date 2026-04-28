@@ -1,0 +1,58 @@
+/* style/base.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Menüye tıklayınca yumuşak kayma sağlar */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 65%;
+    height: auto;
+    display: block;
+}
+
+/* Tekrar kullanılabilir yardımcı (utility) sınıflar */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text-main);
+}
+
+.bg-light {
+    background-color: var(--color-background-alt);
+}

@@ -1,0 +1,168 @@
+/* style/style.css */
+
+/* --- Header & Navigasyon --- */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav__logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+.nav__list {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.nav__link {
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+}
+
+/* --- Hero Bölümü --- */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    min-height: 80vh;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.hero__content {
+    flex: 1;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+    max-width: 500px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* --- Butonlar --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn__icon {
+    display: inline-block;
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: 2px solid var(--color-primary);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border: 2px solid var(--color-border);
+}
+
+.btn--outline:hover {
+    border-color: var(--color-text-main);
+}
+
+/* --- Grid Sistemleri (Projeler ve Yetenekler için kalıp) --- */
+.projects__grid,
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Kart Tasarımı (UI.js tarafından oluşturulacak elemanlar için hazırlık) */
+.card {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+}
+
+/* --- Responsive (Mobil Uyumluluk) --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: var(--spacing-xl);
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .nav__list {
+        display: none;
+        /* Mobilde hamburger menü yapılabilir */
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+}
