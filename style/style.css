@@ -144,6 +144,105 @@
     border-top: 1px solid var(--color-border);
     color: var(--color-text-muted);
 }
+.skill__title {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.skill__progress-bg {
+    background: var(--color-border);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill__progress-fill {
+    background: var(--color-primary);
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+/* --- Deneyim Kartları (Experience) --- */
+.experience-card {
+    margin-bottom: 1.5rem;
+}
+
+.experience__role {
+    color: var(--color-primary-dark);
+}
+
+.experience__company {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.experience__desc {
+    margin-bottom: 1rem;
+}
+
+.experience__tech-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.experience__tech-item {
+    background: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* --- Proje Kartları (Projects) --- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project__title {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+.project__desc {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.project__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.project__lang {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.project__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.project__stars {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.btn--sm {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+}
 
 /* --- Responsive (Mobil Uyumluluk) --- */
 @media (max-width: 768px) {
