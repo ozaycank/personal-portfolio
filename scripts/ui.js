@@ -8,7 +8,6 @@ export function renderSkills(skills, containerId) {
     return;
   }
 
-  // Inline stiller kaldırıldı, .skill-card, .skill__title, .skill__bar eklendi
   const html = skills
     .map(
       (skill) => `
@@ -46,6 +45,33 @@ export function renderExperience(experiences, containerId) {
             <div class="experience__tech-list">
                 ${exp.technologies.map((tech) => `<span class="experience__tech-item">${tech}</span>`).join("")}
             </div>
+        </div>
+    `,
+    )
+    .join("");
+
+  container.innerHTML = html;
+}
+
+//Eğitimler
+export function renderEducation(education, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  if (!education || education.length === 0) {
+    container.innerHTML = "<p>Eğitim verisi bulunamadı.</p>";
+    return;
+  }
+
+  const html = education
+    .map(
+      (edu) => `
+        <div class="card education-card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--color-primary);">
+            <h3 class="education__degree" style="color: var(--color-primary-dark);">${edu.degree}</h3>
+            <h4 class="education__institution" style="color: var(--color-text-muted); margin-bottom: 0.5rem;">
+                ${edu.institution} | <small>${edu.duration}</small>
+            </h4>
+            <p class="education__desc">${edu.description}</p>
         </div>
     `,
     )

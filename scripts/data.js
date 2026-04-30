@@ -72,3 +72,22 @@ export const skillsData = [
   { name: "Linux Process Management", level: "75%" },
   { name: "IIS", level: "75%" },
 ];
+
+export const educationData = [
+  {
+    id: 1,
+    institution: "İstanbul Teknik Üniversitesi",
+    degree: "Bilgisayar Mühendisliği",
+    duration: "Eylül 2017- Eylül 2023",
+    description:
+      "Bilgisayar mühendisliği alanında lisans eğitimi aldım. 4. Sınıfta iken çalışma hayatına geçtiğim için okulu tamamlamadım.",
+  },
+  {
+    id: 2,
+    institution: "Anadolu Üniversitesi",
+    degree: "Bilgisayar Programcılığı",
+    duration: "Eylül 2024- Haziran 2026",
+    description:
+      "3.40/4.00 ortalama ile Bilgisayar Programcılığı bölümünden mezun oldum.",
+  },
+];
